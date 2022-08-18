@@ -4,7 +4,7 @@ import pytest
 from fastapi.testclient import TestClient
 from sqlalchemy.orm import Session
 
-from server.db.database import Database
+from db.database import Database
 from main import app
 
 
