@@ -1,6 +1,7 @@
 name: Pull Request
 
-on: [push, pull_request]
+# on: [push, pull_request]
+on: [push]
     
 jobs:
   pytest:
@@ -19,7 +20,7 @@ jobs:
     - name: Test with pytest
       run: |
         pip install pytest pytest-cov pytest-html pytest-sugar pytest-json-report
-        pytest -v --cov --html=reports/pytest/report.html
+        py.test -v --cov --html=reports/pytest/report.html
     - name: Archive pytest coverage results
       uses: actions/upload-artifact@v1
       with:
