@@ -34,4 +34,4 @@ jobs:
         # env:
         #   # add environment variables for tests
         run: |
-          pytest
+          python -m pytest tests/
